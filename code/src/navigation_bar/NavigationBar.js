@@ -8,7 +8,7 @@ function NavigationBar({isAuth}) {
       <nav>
         <h1 className="nav-title">Life In Words</h1>
         <div className="nav-links">
-          <Link to="/">Home</Link>
+          {isAuth &&<Link to="/">Home</Link>}
           {isAuth && <Link to="/addpost"> Create Post </Link>}
           {isAuth && <Link to="/logout"> Logout </Link>}
           {!isAuth && <Link to="/login"> Login </Link>}
