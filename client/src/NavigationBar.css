@@ -1,0 +1,37 @@
+nav {
+    margin: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #142d4c;
+    display: flex;
+    justify-content: space-between; /* Adjusted to space-between to push title to the left and links to the right */
+    align-items: center;
+    text-decoration: none;
+}
+  
+.nav-title {
+    margin-left: 30px; /* Add some margin to the title for spacing */
+    color: #ececec;
+    font-size: 24px; /* Adjust font size as needed */
+    padding-left: 60px;
+    background-image: url('./icons/book.png');
+    background-repeat: no-repeat;
+    background-size: 48px 48px; 
+    background-position: left center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+  
+.nav-links a {
+    color: #ececec;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 22px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.nav-links {
+    margin-right: 30px;
+}
+
