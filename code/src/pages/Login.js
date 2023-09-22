@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom"
 import { auth, provider } from "../firebase"
 import { signInWithPopup } from 'firebase/auth'
+import './Login.css'
 
 function Login({setIsAuth}) {
     const navigate = useNavigate();
@@ -15,9 +16,9 @@ function Login({setIsAuth}) {
     }
 
     return (
-        <div>
+        <div className="login-page">
             <p>Sign In With Your Account</p>
-            <button onClick={signInWithGoogle}>Sign In</button>
+            <button className="login-with-google-btn" onClick={signInWithGoogle}>Sign In</button>
         </div>
     );
 }

@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route} from "react-router-dom"
 import Home from './pages/Home';
 import AddPost from './pages/AddPost';
 import Login from './pages/Login';
-import NavigationBar from './NavigationBar';
+import NavigationBar from './navigation_bar/NavigationBar';
 import { useState } from 'react';
 import Logout from './pages/Logout';
 
