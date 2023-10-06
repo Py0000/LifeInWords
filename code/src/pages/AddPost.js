@@ -22,6 +22,8 @@ function AddPost(isAuth) {
 
     const reviewsCollectionRef = collection(db, "reviews");
     const createReview = async () => {
+        const currentDate = new Date();
+
         const createdByName = auth.currentUser.displayName;
         const createdById = auth.currentUser.uid;
         let createdByObject = {
@@ -34,7 +36,8 @@ function AddPost(isAuth) {
             author: author,
             rating: rating,
             review: review,
-            createdBy: createdByObject
+            createdBy: createdByObject,
+            dateCreated: currentDate
         }
 
         // Arg 1: reference to the database collection (i.e. "table") you want to the info add to

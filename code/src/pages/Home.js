@@ -42,7 +42,10 @@ function Home() {
                     <div className="review-container">
                         {review.review}
                     </div>
-                    <h4>@{review.createdBy.name}</h4>
+                    <div className="h4-container">
+                        <h4>@{review.createdBy.name}</h4>
+                        <h4>{review.dateCreated.toDate().toLocaleDateString()}</h4>
+                    </div>
                 </div>
             })}
         </div>

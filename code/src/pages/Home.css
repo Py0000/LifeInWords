@@ -70,8 +70,11 @@
     overflow-y: auto;
   }
 
-  .review h4 {
+  .review .h4-container  {
     font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif; /* List of comic-like fonts, falling back to sans-serif if none are available */
     font-size: 14px;
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* optional, to ensure it takes full width of its parent */
+    padding-top: 24px;
   }
