@@ -1,7 +1,11 @@
 .home-page {
     width: 100%;
-    min-height: calc(100vh - 80px);
-    height: auto;
+    height: 100vh;
+    place-items: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.25)), url('../icons/addpost.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,14 +13,17 @@
   }
   
   .home-page .review {
-    width: 600px;
+    width: 900px;
     height: auto;
-    max-height: 600px;
-    background-color: rgb(250, 250, 250);
+    max-height: 900px;
+    background-color: #FAF9D0;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin: 20px;
-    padding: 20px;
-    border-radius: 15px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 16px;
   }
   
   .review .review-header {
@@ -38,7 +45,6 @@
   
   .delete-post button {
     border: none;
-  
     background: none;
     font-size: 30px;
     cursor: pointer;
@@ -62,4 +68,10 @@
     width: 100%;
     overflow: hidden;
     overflow-y: auto;
+  }
+
+  .review h4 {
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif; /* List of comic-like fonts, falling back to sans-serif if none are available */
+    font-size: 14px;
+    text-align: right;
   }
