@@ -12,7 +12,7 @@
     font-size: 30px;
   }
   
-  /* GOOGLE BUTTOn */
+  /* GOOGLE Button */
   .login-with-google-btn {
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
@@ -47,3 +47,65 @@
     box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
     cursor: not-allowed;
   }
+
+
+  /* EMAIL & PASSWORD Fields */
+.login-input {
+  width: 250px;
+  padding: 10px 12px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 18px;
+  transition: border 0.3s;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #777;
+}
+
+/* EMAIL & PASSWORD Login Button */
+.login-with-email-btn {
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 3px;
+  color: #feffdf;
+  font-size: 25px;
+  font-weight: 500;
+  background-color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.login-with-email-btn:hover {
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.login-with-email-btn:active {
+  background-color: #eeeeee;
+  color: black;
+}
+
+.login-with-email-btn:focus {
+  outline: none;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25),
+  0 0 0 3px #c8dafc;
+}
+
+.login-with-email-btn:disabled {
+  filter: grayscale(100%);
+  background-color: #ebebeb;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
+  cursor: not-allowed;
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  font-size: 16px;
+  margin: 10px 0;
+}
