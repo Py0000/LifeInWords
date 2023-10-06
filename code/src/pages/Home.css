@@ -65,10 +65,14 @@
     word-wrap: break-word;
     height: auto;
     max-height: 400px;
-    width: 100%;
+    width: 94%;
     overflow: hidden;
     overflow-y: auto;
-  }
+    border: 1px solid #B59410; 
+    padding: 10px; 
+    margin: 24px;
+    border-radius: 8px; 
+}
 
   .review .h4-container  {
     font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif; /* List of comic-like fonts, falling back to sans-serif if none are available */
@@ -76,5 +80,4 @@
     display: flex;
     justify-content: space-between;
     width: 100%; /* optional, to ensure it takes full width of its parent */
-    padding-top: 24px;
   }
