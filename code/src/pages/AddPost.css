@@ -21,7 +21,7 @@
 
 
 .add-post-page .input-field {
-    margin-top: 15px;
+    margin-bottom: 12px;
     display: flex;
     flex-direction: column;
 }
@@ -41,7 +41,7 @@
 }
 
 .input-field textarea {
-    height: 250px;
+    height: 240px;
     width: 600px;
 }
 
@@ -67,3 +67,15 @@ textarea {
     margin-top: 5px;
 }
   
+.error-text {
+    color: rgb(202, 3, 3);
+    font-weight: bold; 
+    align-self: center;
+}
+
+.error-input {
+    border: 1px solid red;
+    box-shadow: 0 0 5px red; /* Optional: adds a bit of a glowing effect */
+}
+
+
