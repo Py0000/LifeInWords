@@ -15,7 +15,7 @@ function App() {
       <NavigationBar isAuth={isAuth}/>
       <Routes>
         <Route path='/' element={<Home/>} />
-        <Route path="/addpost" element={<AddPost/>} />
+        <Route path="/addpost" element={<AddPost isAuth={isAuth}/>} />
         <Route path="/login" element={<Login setIsAuth={setIsAuth}/>} />
         <Route path="/logout" element={<Logout setIsAuth={setIsAuth}/>}/>
       </Routes>

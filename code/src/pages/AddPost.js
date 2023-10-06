@@ -1,15 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { addDoc, collection } from 'firebase/firestore'
 import './AddPost.css'
 import { db, auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
 
-function AddPost() {
+function AddPost(isAuth) {
     let navigate = useNavigate();
     const [title, setTitle] = useState("");
     const [author, setAuthor] = useState("");
     const [rating, setRating] = useState("");
     const [review, setReview] = useState("");
+
+    // Guard function (additional security measure)
+    // Redirect user to login page if not authenticated
+    useEffect(() => {
+        if (!isAuth) {
+            navigate("/login")
+        }
+    })
 
     const reviewsCollectionRef = collection(db, "reviews");
     const createReview = async () => {
