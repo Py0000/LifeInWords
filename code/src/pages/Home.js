@@ -42,6 +42,7 @@ function Home() {
                     <div className="review-container">
                         {review.review}
                     </div>
+                    
                     <div className="h4-container">
                         <h4>@{review.createdBy.name}</h4>
                         <h4>{review.dateCreated.toDate().toLocaleDateString()}</h4>

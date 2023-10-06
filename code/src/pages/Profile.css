@@ -1,0 +1,78 @@
+.profile-main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.25)), url('../icons/profileBg.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding-top: 40px; /* Space from the top of the page */
+}
+
+.profile-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 30px; /* Space between profile details and reviews */
+}
+
+.profile-box {
+    display: flex;  /* Makes children elements (profile pic and name) line up horizontally */
+    align-items: center; /* Aligns children vertically in the center */
+    justify-content: center;
+    padding: 25px; /* Adds some space inside the box */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.25)), url('../icons/profileBox.jpg');
+    border-radius: 10px; /* Rounded corners for the box */
+    width: 100%;
+}
+
+.profile-pic {
+    width: 60px; /* Adjust based on your preference */
+    height: 60px;
+    border-radius: 50%; /* This makes the picture circular */
+    margin-right: 30px; /* Space between the picture and the name */
+}
+
+.account-name {
+    font-family: 'Pacifico', cursive; /* Example fancy font, ensure you've imported it */
+    font-size: 24px; /* Adjust based on your preference */
+    color: #333; /* Example text color, change as desired */
+}
+
+.user-reviews-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Three items per row */
+    gap: 2rem; /* Space between each review */
+    margin-top: 3rem; /* Space from profile box to reviews */
+}
+
+.user-post {
+    padding: 30px;
+    background-color: #114611; /* Post-it note color */
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Floating effect */
+    transform: rotate(-2deg); /* Slight rotation */
+    transition: transform 0.15s; /* Smoothens the hover effect */
+}
+
+.user-post:hover {
+    transform: rotate(0); /* Reset rotation on hover */
+}
+
+.user-post-wrapper {
+    transform: rotate(-2deg); /* Slight rotation */
+    transition: transform 0.25s; /* Smoothens the hover effect */
+}
+.user-post-wrapper:hover {
+    transform: rotate(0); /* Reset rotation on hover */
+}
+
+.delete-button-wrapper {
+    position: absolute; /* Positioning relative to the .user-post-wrapper */
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+}

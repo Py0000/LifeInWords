@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import NavigationBar from './navigation_bar/NavigationBar';
 import { useState } from 'react';
 import Logout from './pages/Logout';
+import Profile from './pages/Profile';
 
 function App() {
   const [isAuth, setIsAuth] = useState(false);
@@ -18,6 +19,7 @@ function App() {
         <Route path="/addpost" element={<AddPost isAuth={isAuth}/>} />
         <Route path="/login" element={<Login setIsAuth={setIsAuth}/>} />
         <Route path="/logout" element={<Logout setIsAuth={setIsAuth}/>}/>
+        <Route path="/profile" element={<Profile isAuth={isAuth}/>}/>
       </Routes>
     </BrowserRouter>
   );
