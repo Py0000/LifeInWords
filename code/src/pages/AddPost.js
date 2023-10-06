@@ -13,6 +13,7 @@ function AddPost(isAuth) {
 
     // Guard function (additional security measure)
     // Redirect user to login page if not authenticated
+    // Checks immediately when this component is rendered
     useEffect(() => {
         if (!isAuth) {
             navigate("/login")
