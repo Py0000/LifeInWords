@@ -84,6 +84,14 @@ function AddPost(isAuth) {
 
     const reviewsCollectionRef = collection(db, "reviews");
     const createReview = async () => {
+        // Check if there are any errors in the formErrors object
+        const errorValues = Object.values(formErrors);
+        const hasError = errorValues.some(errorMsg => errorMsg !== "");
+        const hasInvalidParam = title.length <= 0 || review.length <= 0 || (rating < 0 || rating > 5)
+        if (hasError || hasInvalidParam) {
+            return;
+        }
+        
         const currentDate = new Date();
 
         const createdByName = auth.currentUser.displayName;
