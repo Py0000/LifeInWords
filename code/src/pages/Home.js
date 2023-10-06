@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useContext } from "react";
 import { getDocs, collection } from 'firebase/firestore'
 import { db } from "../firebase";
 import './Home.css'
+import ReviewsContext from './ReviewsContext.js';  
 
 function Home() {
-    const [reviewList, setReviewList] = useState([]);
+    const { globalReviews, setGlobalReviews } = useContext(ReviewsContext);
 
     useEffect(() => {
         const reviewsCollectionRef = collection(db, "reviews");
@@ -14,8 +15,7 @@ function Home() {
         // Arg 2: Data that should be added
         const getReviews = async () => {
             const reviewData = await getDocs(reviewsCollectionRef);
-            // Obtain and format the data retrieved from firebase database
-            setReviewList(reviewData.docs.map((doc) => ({...doc.data(), id: doc.id})));
+            setGlobalReviews(reviewData.docs.map((doc) => ({...doc.data(), id: doc.id})));
         }
 
         getReviews();
@@ -23,7 +23,7 @@ function Home() {
 
     return (
         <div className="home-page">
-            {reviewList.map((review) => {
+            {globalReviews.map((review) => {
                 return <div className="review">
                     <div className="review-header"> 
                         <div className="title"> 
@@ -42,7 +42,7 @@ function Home() {
                     <div className="review-container">
                         {review.review}
                     </div>
-                    
+
                     <div className="h4-container">
                         <h4>@{review.createdBy.name}</h4>
                         <h4>{review.dateCreated.toDate().toLocaleDateString()}</h4>

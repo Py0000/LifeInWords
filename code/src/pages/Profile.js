@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { auth, db } from "../firebase"
 import { collection, where, query, getDocs, deleteDoc, doc } from 'firebase/firestore';
 import './Profile.css'
+import ReviewsContext from './ReviewsContext.js';  
 
 function Profile({isAuth}) {
     const navigate = useNavigate(); 
+    const { globalReviews, setGlobalReviews } = useContext(ReviewsContext);
+
     const [accountName, setAccountName] = useState(""); 
     const [profilePic, setProfilePic] = useState("");
     const [userReviews, setUserReviews] = useState([]);
@@ -15,6 +18,8 @@ function Profile({isAuth}) {
     const deletePost = async (id) => {
         const reviewDoc = doc(db, "reviews", id)
         await deleteDoc(reviewDoc);
+        const updatedReviews = globalReviews.filter(review => review.id !== id);
+        setGlobalReviews(updatedReviews);
         fetchUserReviews();
     }
 
