@@ -7,7 +7,9 @@ import ReviewsContext from './ReviewsContext.js';
 function Home() {
     const { globalReviews, setGlobalReviews } = useContext(ReviewsContext);
 
+    // Fetch data from a firebase database and update the home page with the reviews that are stored in the database
     useEffect(() => {
+        // The database reference in the firebase console that stores all the data
         const reviewsCollectionRef = collection(db, "reviews");
 
         // Made a call to firebase to retrieve the information from the database

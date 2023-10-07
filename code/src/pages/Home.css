@@ -10,74 +10,75 @@
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
-  }
+}
   
-  .home-page .review {
-    width: 900px;
-    height: auto;
-    max-height: 900px;
-    background-color: #FAF9D0;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    margin: 20px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    border-radius: 16px;
-  }
+.home-page .review {
+  width: 900px;
+  height: auto;
+  max-height: 900px;
+  background-color: #FAF9D0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 16px;
+}
   
-  .review .review-header {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-  }
-  
-  .review-header .title {
-    flex: 50%;
-  }
-  .review-header .delete-post {
-    flex: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  
-  .delete-post button {
-    border: none;
-    background: none;
-    font-size: 30px;
-    cursor: pointer;
-  }
-
-  .review .review-author-rating {
-    word-wrap: break-word;
-    height: auto;
-    max-height: 400px;
-    width: 100%;
-    overflow: hidden;
-    overflow-y: auto;
-    text-align: center;
-    color: grey;
-  }
-  
-  .review .review-container {
-    word-wrap: break-word;
-    height: auto;
-    max-height: 400px;
-    width: 94%;
-    overflow: hidden;
-    overflow-y: auto;
-    border: 1px solid #B59410; 
-    padding: 10px; 
-    margin: 24px;
-    border-radius: 8px; 
+.review .review-header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
 }
 
-  .review .h4-container  {
-    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif; /* List of comic-like fonts, falling back to sans-serif if none are available */
-    font-size: 14px;
-    display: flex;
-    justify-content: space-between;
-    width: 100%; /* optional, to ensure it takes full width of its parent */
-  }
+.review-header .title {
+  flex: 50%;
+}
+
+.review-header .delete-post {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.delete-post button {
+  border: none;
+  background: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.review .review-author-rating {
+  word-wrap: break-word;
+  height: auto;
+  max-height: 400px;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  text-align: center;
+  color: grey;
+}
+
+.review .review-container {
+  word-wrap: break-word;
+  height: auto;
+  max-height: 400px;
+  width: 94%;
+  overflow: hidden;
+  overflow-y: auto;
+  border: 1px solid #B59410; 
+  padding: 10px; 
+  margin: 24px;
+  border-radius: 8px; 
+}
+
+.review .h4-container  {
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif; /* List of comic-like fonts, falling back to sans-serif if none are available */
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* optional, to ensure it takes full width of its parent */
+}

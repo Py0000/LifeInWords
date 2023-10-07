@@ -14,10 +14,15 @@ function Profile({isAuth}) {
     const [userReviews, setUserReviews] = useState([]);
 
 
-    // Delete the review
+    // Delete the review (specified/identified by the review id (provided when a review is created))
     const deletePost = async (id) => {
+        // The specific review in the firebase database (identified by the id)
         const reviewDoc = doc(db, "reviews", id)
+
+        // Firebase database API to delete an entry 
         await deleteDoc(reviewDoc);
+
+        // Update the reviews shown on the user profile page as well as the home page
         const updatedReviews = globalReviews.filter(review => review.id !== id);
         setGlobalReviews(updatedReviews);
         fetchUserReviews();

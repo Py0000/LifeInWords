@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { addDoc, collection } from 'firebase/firestore'
-import './AddPost.css'
-import { db, auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
+import { addDoc, collection } from 'firebase/firestore'
+import { db, auth } from "../firebase";
+import './AddPost.css'
 
 function AddPost(isAuth) {
-    let navigate = useNavigate();
+    let navigate = useNavigate(); // Hook that is used to redirect user to the corresponding page.
+
+    // Captures and allow modification to the state of these variables used in this function.
     const [title, setTitle] = useState("");
     const [author, setAuthor] = useState("");
     const [rating, setRating] = useState("");
@@ -17,6 +19,7 @@ function AddPost(isAuth) {
         review: ""
     });
 
+    // Ensures title field is not empty
     const isValidTitle = (titleValue) => {
         if (titleValue.length <= 0) {
             return "Title should not be empty.";
@@ -24,6 +27,7 @@ function AddPost(isAuth) {
         return "";
     };
 
+    // Ensures rating is between 0 and 5
     const isValidRating = (value) => {
         const ratingValue = parseFloat(value);
         if (isNaN(ratingValue) || ratingValue < 0 || ratingValue > 5) {
@@ -32,6 +36,7 @@ function AddPost(isAuth) {
         return "";
     };
 
+    // Ensures there is review being written
     const isValidReview = (reviewValue) => {
         if (reviewValue.length <= 0) {
             return "Review should not be empty.";
@@ -39,6 +44,9 @@ function AddPost(isAuth) {
         return "";
     };
 
+    // Triggers when user types in the title field
+    // Validates the input
+    // Capture the input if valid
     const handleTitleChange = (e) => {
         const value = e.target.value;
 
@@ -50,6 +58,9 @@ function AddPost(isAuth) {
         setTitle(value);
     };
     
+    // Triggers when user types in the rating field
+    // Validates the input
+    // Capture the input if valid
     const handleRatingChange = (e) => {
         const value = e.target.value;
 
@@ -61,6 +72,9 @@ function AddPost(isAuth) {
         setRating(value);
     };
 
+    // Triggers when user types in the review field
+    // Validates the input
+    // Capture the input if valid
     const handleReviewChange = (e) => {
         const value = e.target.value;
 
@@ -82,7 +96,11 @@ function AddPost(isAuth) {
         }
     })
 
+    // The database reference in the firebase console that stores all the data
     const reviewsCollectionRef = collection(db, "reviews");
+
+    // Checks for validity of the inputs
+    // Saves the data into the database if all inputs are valid
     const createReview = async () => {
         // Check if there are any errors in the formErrors object
         const errorValues = Object.values(formErrors);

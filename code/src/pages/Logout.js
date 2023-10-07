@@ -6,8 +6,9 @@ import './Logout.css'
 
 
 function Logout({setIsAuth}) {
-    const navigate = useNavigate();
+    const navigate = useNavigate(); // Handle navigation to corresponding page after being authenticated
 
+    // Make use of firebase console authentication API
     const signUserOut = () => {
         signOut(auth).then(() => {
             localStorage.setItem("isAuth", false);
