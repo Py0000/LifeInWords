@@ -9,7 +9,7 @@ LifeInWords is a book review platform, where book lovers can share their reflect
 2. Navigate to the `\code` folder. 
 3. Run the application in development mode via `npm start`.
 4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-    * Ensure that the app is already running.
+  * Ensure that the app is already running.
 
 
 ## Acknowledgement
