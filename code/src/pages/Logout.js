@@ -1,7 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"
-import { auth, provider } from "../firebase"
+import { auth } from "../firebase"
 import { signOut } from "firebase/auth";
+import './Logout.css'
+
 
 function Logout({setIsAuth}) {
     const navigate = useNavigate();
@@ -19,10 +21,10 @@ function Logout({setIsAuth}) {
     }
 
     return (
-        <div>
-            <p>Do you wish to logout?</p>
-            <button onClick={signUserOut}>Confirm Logout</button>
-            <button onClick={cancelHandler}>Cancel</button>
+        <div className="logout-container">
+            <p className="logout-text">Do you wish to logout?</p>
+            <button className="logout-btn" onClick={signUserOut}>Yes</button>
+            <button className="cancel-btn" onClick={cancelHandler}>Cancel</button>
         </div>
     );
 }

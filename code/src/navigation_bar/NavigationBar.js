@@ -10,8 +10,8 @@ function NavigationBar({isAuth}) {
         <div className="nav-links">
           {isAuth &&<Link to="/">Home</Link>}
           {isAuth && <Link to="/addpost"> Create Post </Link>}
-          {isAuth && <Link to="/logout"> Logout </Link>}
           {isAuth && <Link to="/profile"> My Profile </Link>}
+          {isAuth && <Link to="/logout"> Logout </Link>}
           {!isAuth && <Link to="/login"> Login </Link>}
         </div>
       </nav>
