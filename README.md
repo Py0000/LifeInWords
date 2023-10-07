@@ -15,27 +15,27 @@ LifeInWords is a book review platform, where book lovers can share their reflect
 
 ## Snapshot of the application
 **Login Page**
-![image](https://github.com/Py0000/LifeInWords/main/docs/login.JPG)
+![image](https://github.com/Py0000/LifeInWords/tree/main/docs/login.JPG)
 
 <br>
 
 **Home Page**
-![image](https://github.com/Py0000/LifeInWords/main/docs/home.JPG)
+![image](https://github.com/Py0000/LifeInWords/tree/main/docs/home.JPG)
 
 <br>
 
 **Create Review Page**
-![image](https://github.com/Py0000/LifeInWords/main/docs/add.JPG)
+![image](https://github.com/Py0000/LifeInWords/tree/main/docs/add.JPG)
 
 <br>
 
 **Profile Page**
-![image](https://github.com/Py0000/LifeInWords/main/docs/profile.JPG)
+![image](https://github.com/Py0000/LifeInWords/tree/main/docs/profile.JPG)
 
 <br>
 
 **Logout Page**
-![image](https://github.com/Py0000/LifeInWords/main/docs/logout.JPG)
+![image](https://github.com/Py0000/LifeInWords/tree/main/docs/logout.JPG)
 
 <br>
 
