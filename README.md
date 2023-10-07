@@ -24,6 +24,10 @@ LifeInWords is a book review platform, where book lovers can share their reflect
 
 ![image](https://github.com/Py0000/LifeInWords/blob/main/docs/home.JPG)
 
+User can see all reviews created by himself/herself as well as other book reviewer(s). User can also use the search bar to search for reviews for a specific book.
+
+<br>
+
 <br>
 
 **Create Review Page**
@@ -36,7 +40,10 @@ LifeInWords is a book review platform, where book lovers can share their reflect
 
 ![image](https://github.com/Py0000/LifeInWords/blob/main/docs/profile.JPG)
 
-User can see the review that he/she has created. He/She can also choose to delete the review. 
+User can see the review(s) that he/she has created. He/She can also choose to delete the review. 
+
+<br>
+
 <br>
 
 **Logout Page**
