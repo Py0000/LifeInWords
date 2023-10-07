@@ -138,7 +138,7 @@ function AddPost(isAuth) {
     return (  
         <div className="add-post-page">
             <h1>Create a Review!</h1>
-            {formErrors.title && <p className="error-text">{formErrors.title}</p> || formErrors.rating && <p className="error-text">{formErrors.rating}</p> || formErrors.review && <p className="error-text">{formErrors.review}</p>}  
+            {(formErrors.title && <p className="error-text">{formErrors.title}</p>) || (formErrors.rating && <p className="error-text">{formErrors.rating}</p>) || (formErrors.review && <p className="error-text">{formErrors.review}</p>)}  
             <div className="input-field">
                 <label>Book Title: </label>
                 <input placeholder="Title" onChange={handleTitleChange} className={formErrors.title ? "error-input" : ""}></input>
@@ -155,7 +155,7 @@ function AddPost(isAuth) {
                 <label>Review: </label>
                 <textarea placeholder="Write your thoughts here..." onChange={handleReviewChange} className={formErrors.review ? "error-input" : ""}></textarea>
             </div>
-            <button onClick={createReview}> Submit My Review</button>
+            <button onClick={createReview}>Post Review</button>
         </div>
     );
 }

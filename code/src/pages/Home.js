@@ -1,11 +1,15 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { getDocs, collection } from 'firebase/firestore'
 import { db } from "../firebase";
-import './Home.css'
 import ReviewsContext from './ReviewsContext.js';  
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import './Home.css'
 
 function Home() {
     const { globalReviews, setGlobalReviews } = useContext(ReviewsContext);
+    const [searchQuery, setSearchQuery] = useState("");
 
     // Fetch data from a firebase database and update the home page with the reviews that are stored in the database
     useEffect(() => {
@@ -21,36 +25,50 @@ function Home() {
         }
 
         getReviews();
-    }, []);
+    });
 
     return (
         <div className="home-page">
-            {globalReviews.map((review) => {
-                return <div className="review">
-                    <div className="review-header"> 
-                        <div className="title"> 
-                            <h1> {review.title} </h1>
+            
+        <div className="search-container">
+            <input 
+                type="text" 
+                placeholder="Search for a book title..." 
+                value={searchQuery} 
+                onChange={(e) => setSearchQuery(e.target.value)} 
+                className="search-input"
+            />
+            <FontAwesomeIcon icon={faSearch} className="search-icon"/>
+        </div>
+
+            {globalReviews
+                .filter(review => review.title.toLowerCase().includes(searchQuery.toLowerCase()))
+                .map((review) => {
+                    return <div className="review">
+                        <div className="review-header"> 
+                            <div className="title"> 
+                                <h1> {review.title} </h1>
+                            </div>
+                        </div>
+
+                        <div className="review-author-rating">
+                            By: {review.author}
+                        </div>
+
+                        <div className="review-author-rating">
+                            Rating: {review.rating}/5
+                        </div>
+
+                        <div className="review-container">
+                            {review.review}
+                        </div>
+
+                        <div className="h4-container">
+                            <h4>@{review.createdBy.name}</h4>
+                            <h4>{review.dateCreated.toDate().toLocaleDateString()}</h4>
                         </div>
                     </div>
-
-                    <div className="review-author-rating">
-                        By: {review.author}
-                    </div>
-
-                    <div className="review-author-rating">
-                        Rating: {review.rating}/5
-                    </div>
-
-                    <div className="review-container">
-                        {review.review}
-                    </div>
-
-                    <div className="h4-container">
-                        <h4>@{review.createdBy.name}</h4>
-                        <h4>{review.dateCreated.toDate().toLocaleDateString()}</h4>
-                    </div>
-                </div>
-            })}
+                })}
         </div>
     );
 }

@@ -17,6 +17,7 @@ import './App.css';
 
 function App() {
     const [isAuth, setIsAuth] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [globalReviews, setGlobalReviews] = useState([]);
 
     // Checks the authentication status and updates accordingly when this functions is called everytime
@@ -27,10 +28,15 @@ function App() {
             } else {
                 setIsAuth(false);
             }
+            setLoading(false); 
         });
 
         return () => unsubscribe(); // Cleanup the listener on unmount
     }, []);
+
+    // Displays a spinner when page is loading/authentication checking
+    // Helps to prevent race condition errors
+    if (loading) return <div className="spinner"></div>;
 
     // If user is not authenticated and attempts to visit the url that ends with /, it will redirect user to /login page instead.
     return (

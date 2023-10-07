@@ -23,9 +23,11 @@ function Logout({setIsAuth}) {
 
     return (
         <div className="logout-container">
-            <p className="logout-text">Do you wish to logout?</p>
-            <button className="logout-btn" onClick={signUserOut}>Yes</button>
-            <button className="cancel-btn" onClick={cancelHandler}>Cancel</button>
+            <div className="logout-box">
+                <p className="logout-text">Do you wish to logout?</p>
+                <button className="logout-btn" onClick={signUserOut}>Yes</button>
+                <button className="cancel-btn" onClick={cancelHandler}>Cancel</button>
+            </div>
         </div>
     );
 }

@@ -82,3 +82,38 @@
   justify-content: space-between;
   width: 100%; /* optional, to ensure it takes full width of its parent */
 }
+
+.search-container {
+  position: relative;
+  width: 70%;
+}
+
+.search-input {
+  width: 100%;
+  height: 50px;
+  padding: 10px 40px 10px 10px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #007BFF;
+}
+
+.search-icon {
+  position: absolute; 
+  right: 10px;       
+  top: 50%;          
+  transform: translateY(-50%); 
+  cursor: pointer;
+  color: #aaa;      
+  padding-right: 8px; 
+}
+
+.search-input:focus + .search-icon {
+  color: #777;      
+}
