@@ -47,16 +47,13 @@ function Home() {
                     return <div className="review">
                         <div className="review-header"> 
                             <div className="title"> 
-                                <h1> {review.title} </h1>
+                                <h2> {review.title} </h2>
                             </div>
                         </div>
 
                         <div className="review-author-rating">
-                            By: {review.author}
-                        </div>
-
-                        <div className="review-author-rating">
-                            Rating: {review.rating}/5
+                            <h4>Author: {review.author}</h4>
+                            <h4>Rating: {review.rating}/5</h4>
                         </div>
 
                         <div className="review-container">

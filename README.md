@@ -13,6 +13,32 @@ LifeInWords is a book review platform, where book lovers can share their reflect
 
 <br>
 
+## Snapshot of the application
+**Login Page**
+![image](https://github.com/Py0000/LifeInWords/main/docs/login.JPG)
+
+<br>
+
+**Home Page**
+![image](https://github.com/Py0000/LifeInWords/main/docs/home.JPG)
+
+<br>
+
+**Create Review Page**
+![image](https://github.com/Py0000/LifeInWords/main/docs/add.JPG)
+
+<br>
+
+**Profile Page**
+![image](https://github.com/Py0000/LifeInWords/main/docs/profile.JPG)
+
+<br>
+
+**Logout Page**
+![image](https://github.com/Py0000/LifeInWords/main/docs/logout.JPG)
+
+<br>
+
 #### Acknowledgement
-* This is a project to practice and learn more about web page development using React-Js. 
-* Adapted and modified from: PedroTech: Build a Blog Website (Youtube)
+* This is a quick and small project to practice, refresh and re-cap about web page development using React-Js. 
+* Special Thanks to (Adapted and modified from) PedroTech: Build a Blog Website (Youtube)
