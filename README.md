@@ -47,3 +47,4 @@ LifeInWords is a book review platform, where book lovers can share their reflect
 #### Acknowledgement
 * This is a quick and small project to practice, refresh and re-cap about web page development using React-Js. 
 * Special Thanks to (Adapted and modified from) PedroTech: Build a Blog Website (Youtube)
+* Images used 
