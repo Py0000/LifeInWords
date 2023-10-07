@@ -58,5 +58,5 @@ User can see the review(s) that he/she has created. He/She can also choose to de
 * Special Thanks to (Adapted and modified from) PedroTech: Build a Blog Website (Youtube)
 * Images & Icons used 
 
-#### Notes
-* Further extensions can be and will be made in the future. 
+#### Additional Remarks
+* Further extensions can be and will be made in the future. (More features)
