@@ -1,8 +1,8 @@
 # LifeInWords
 
-## Description
 LifeInWords is a book review platform, where book lovers can share their reflection and thoughts with other fellow book lovers after reading a book. 
 
+<br>
 
 ## Getting started
 1. Get a copy of this project source code. 
