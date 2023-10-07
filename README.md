@@ -22,25 +22,25 @@ LifeInWords is a book review platform, where book lovers can share their reflect
 
 **Home Page**
 
-![image](https://github.com/Py0000/LifeInWords/tree/main/docs/home.JPG)
+![image](https://github.com/Py0000/LifeInWords/blob/main/docs/home.JPG)
 
 <br>
 
 **Create Review Page**
 
-![image](https://github.com/Py0000/LifeInWords/tree/main/docs/add.JPG)
+![image](https://github.com/Py0000/LifeInWords/blob/main/docs/add.JPG)
 
 <br>
 
 **Profile Page**
 
-![image](https://github.com/Py0000/LifeInWords/tree/main/docs/profile.JPG)
+![image](https://github.com/Py0000/LifeInWords/blob/main/docs/profile.JPG)
 
 <br>
 
 **Logout Page**
 
-![image](https://github.com/Py0000/LifeInWords/tree/main/docs/logout.JPG)
+![image](https://github.com/Py0000/LifeInWords/blob/main/docs/logout.JPG)
 
 <br>
 
