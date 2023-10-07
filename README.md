@@ -16,7 +16,7 @@ LifeInWords is a book review platform, where book lovers can share their reflect
 ## Snapshot of the application
 **Login Page**
 
-![image](https://github.com/Py0000/LifeInWords/tree/main/docs/login.JPG)
+![image](https://github.com/Py0000/LifeInWords/blob/main/docs/login.JPG)
 
 <br>
 
