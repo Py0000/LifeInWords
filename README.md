@@ -36,6 +36,7 @@ LifeInWords is a book review platform, where book lovers can share their reflect
 
 ![image](https://github.com/Py0000/LifeInWords/blob/main/docs/profile.JPG)
 
+User can see the review that he/she has created. He/She can also choose to delete the review. 
 <br>
 
 **Logout Page**
