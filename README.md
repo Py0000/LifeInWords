@@ -11,6 +11,7 @@ LifeInWords is a book review platform, where book lovers can share their reflect
 4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
   * Ensure that the app is already running.
 
+<br>
 
 #### Acknowledgement
 * This is a project to practice and learn more about web page development using React-Js. 
